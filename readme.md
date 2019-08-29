@@ -3,5 +3,5 @@
 - ·íµMcost¶V¤p¶V¦n-
 - <div>
 	<p¿¿¿¿></p>
-	<img src="¿¿¿¿/game_screen.png">
+	<img src="¿¿¿¿/game_sreen.png">
 </div>
