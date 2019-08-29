@@ -3,5 +3,5 @@
 - 當然cost越小越好-
 - <div>
 	<p蕞蕞></p>
-	<img src="蕞蕞/game_sreen.png">
+	<img src= "game_sreen.png">
 </div>
