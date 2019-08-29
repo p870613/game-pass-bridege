@@ -118,7 +118,6 @@ if(__name__ == '__main__'):
      min_cost = play_value[1] +  play_value[2] + play_value[3] + 2 * play_value[0]
      
      a = [ball(0), ball(1), ball(2), ball(3)]
-     
      run = True
      cost = 0
      while run:
