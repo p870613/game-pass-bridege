@@ -2,6 +2,7 @@ import pygame as pg
 import sys
 from pygame.locals import *
 from easygui import *
+import random
         
 #視窗初始
 pg.init()
@@ -29,7 +30,7 @@ total_cost_font = pg.font.SysFont("arial", 28)
 ball_font = pg.font.SysFont("arial", 16)
 
 #number
-play_value = [10, 20, 30, 50]
+play_value = []
 color = [(0,0,255), (0,255,255), (255,0,0), (255, 123,255)]
 
 #ball aru
@@ -60,7 +61,7 @@ bridege_button_pos_y = [328, 428]
 #animation_bool
 animation = False
 
-mis_cost = play_value[1] +  play_value[2] + play_value[3] + 2 * play_value[0]
+min_cost = 0 #0play_value[1] +  play_value[2] + play_value[3] + 2 * play_value[0]
 
 class ball_text:
      ball_cost_text = ball_font.render("", True, (0, 0, 0))
@@ -111,8 +112,13 @@ class ball(ball_text):
 
 if(__name__ == '__main__'):     
      clock = pg.time.Clock()
+     for i  in range(4):
+          play_value.append(int((random.random()*100) % 100))
+     play_value.sort()
+     min_cost = play_value[1] +  play_value[2] + play_value[3] + 2 * play_value[0]
+     
      a = [ball(0), ball(1), ball(2), ball(3)]
-
+     
      run = True
      cost = 0
      while run:
@@ -252,6 +258,7 @@ if(__name__ == '__main__'):
           screen.blit(total_cost_text, (673, 15))
           
           pg.display.update()
+     print(min_cost)
      pg.quit()   
 
 
